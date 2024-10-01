@@ -40,6 +40,19 @@ h2 {
     margin-bottom: 30px;
 }
 
+/* Mejorar visualización de los títulos */
+.category-title h2 {
+    font-size: 1.8em;  /* Mantener el tamaño original */
+    color: #34495e;    /* Color más oscuro y elegante */
+    font-weight: bold; /* Resaltar el título */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    border-bottom: 3px solid #3498db; /* Línea decorativa */
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
 /* Cuadrícula de productos */
 .catalog-items {
     display: grid;
@@ -54,11 +67,15 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .image-container {
@@ -84,35 +101,40 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Estilos del precio */
 .price {
     font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.original-price {
     color: #e74c3c;
-    font-weight: bold;
-}
-
-.discount {
-    font-size: 0.9em;
-    color: #2ecc71;
-}
-
-.discount span {
     text-decoration: line-through;
 }
 
-/* Botón comprar */
+.discount-price {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Botón comprar mejorado */
 .btn-comprar {
     display: inline-block;
     padding: 10px 20px;
     background-color: #3498db;
     color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-comprar:hover {
     background-color: #2980b9;
+    transform: translateY(-3px);
 }
 
 /* Footer */
