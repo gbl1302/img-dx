@@ -1,0 +1,134 @@
+/* Diseño general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1em;
+    text-align: right;
+    position: relative;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    padding: 0.2em 0.5em;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.8em;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+button.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* Carrito sidebar */
+.cart-sidebar {
+    position: fixed;
+    right: -350px;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.4s ease;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-items {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cart-summary {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+button#checkout-btn {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#checkout-btn:hover {
+    background-color: #0056b3;
+}

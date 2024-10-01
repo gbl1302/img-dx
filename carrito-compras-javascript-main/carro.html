@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras Mejorado</title>
+    <link rel="stylesheet" href="carro.css">
+</head>
+<body>
+    <!-- Icono del carrito con animación -->
+    <header>
+        <div class="cart-icon" id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Lista de productos disponibles -->
+    <section class="product-list">
+        <div class="product" data-id="1" data-name="Mochila A" data-price="49.99">
+            <img src="https://via.placeholder.com/150" alt="Mochila A">
+            <h3>Mochila A</h3>
+            <p>Precio: $49.99</p>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product" data-id="2" data-name="Mochila B" data-price="59.99">
+            <img src="https://via.placeholder.com/150" alt="Mochila B">
+            <h3>Mochila B</h3>
+            <p>Precio: $59.99</p>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <!-- Sidebar del carrito -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>Carrito de Compras</h2>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button id="checkout-btn">Realizar Pago</button>
+        </div>
+    </div>
+
+    <script src="carro.js"></script>
+</body>
+</html>
